@@ -1,0 +1,14 @@
+C:\Users\ENES\Desktop\Projeler\BackupMailleriOku\ReadOffice365Mailbox\ReadOffice365Mailbox\bin\Debug\ReadOffice365Mailbox.exe.config
+C:\Users\ENES\Desktop\Projeler\BackupMailleriOku\ReadOffice365Mailbox\ReadOffice365Mailbox\bin\Debug\ReadOffice365Mailbox.exe
+C:\Users\ENES\Desktop\Projeler\BackupMailleriOku\ReadOffice365Mailbox\ReadOffice365Mailbox\bin\Debug\ReadOffice365Mailbox.pdb
+C:\Users\ENES\Desktop\Projeler\BackupMailleriOku\ReadOffice365Mailbox\ReadOffice365Mailbox\bin\Debug\Microsoft.Exchange.WebServices.Auth.dll
+C:\Users\ENES\Desktop\Projeler\BackupMailleriOku\ReadOffice365Mailbox\ReadOffice365Mailbox\bin\Debug\Microsoft.Exchange.WebServices.dll
+C:\Users\ENES\Desktop\Projeler\BackupMailleriOku\ReadOffice365Mailbox\ReadOffice365Mailbox\bin\Debug\Microsoft.Exchange.WebServices.pdb
+C:\Users\ENES\Desktop\Projeler\BackupMailleriOku\ReadOffice365Mailbox\ReadOffice365Mailbox\bin\Debug\Microsoft.Exchange.WebServices.xml
+C:\Users\ENES\Desktop\Projeler\BackupMailleriOku\ReadOffice365Mailbox\ReadOffice365Mailbox\bin\Debug\Microsoft.Exchange.WebServices.Auth.pdb
+C:\Users\ENES\Desktop\Projeler\BackupMailleriOku\ReadOffice365Mailbox\ReadOffice365Mailbox\bin\Debug\Microsoft.Exchange.WebServices.Auth.xml
+C:\Users\ENES\Desktop\Projeler\BackupMailleriOku\ReadOffice365Mailbox\ReadOffice365Mailbox\obj\Debug\ReadOffice365Mailbox.csprojAssemblyReference.cache
+C:\Users\ENES\Desktop\Projeler\BackupMailleriOku\ReadOffice365Mailbox\ReadOffice365Mailbox\obj\Debug\ReadOffice365Mailbox.csproj.CoreCompileInputs.cache
+C:\Users\ENES\Desktop\Projeler\BackupMailleriOku\ReadOffice365Mailbox\ReadOffice365Mailbox\obj\Debug\ReadOffice365Mailbox.csproj.CopyComplete
+C:\Users\ENES\Desktop\Projeler\BackupMailleriOku\ReadOffice365Mailbox\ReadOffice365Mailbox\obj\Debug\ReadOffice365Mailbox.exe
+C:\Users\ENES\Desktop\Projeler\BackupMailleriOku\ReadOffice365Mailbox\ReadOffice365Mailbox\obj\Debug\ReadOffice365Mailbox.pdb
