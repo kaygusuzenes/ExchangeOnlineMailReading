@@ -52,7 +52,7 @@ namespace ReadOffice365Mailbox
                             using (cmd)
                             {
                                 DataRow dr = dtMails.Rows[i];
-
+                                //studio üstünde commit
                                 //   var tarih = Convert.ToDateTime(dr["received_time"]);
                                 DataTable dtIsAdded = GetDataTable("select * from Emails where subject= '" + dr["subject"] + "' and DATEDIFF(DAY,received_time,GETDATE()) between 0 and 7");
                                 if (dtIsAdded.Rows.Count == 0)
