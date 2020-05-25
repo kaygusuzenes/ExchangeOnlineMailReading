@@ -12,3 +12,7 @@ C:\Users\ENES\Desktop\Projeler\BackupMailleriOku\ReadOffice365Mailbox\ReadOffice
 C:\Users\ENES\Desktop\Projeler\BackupMailleriOku\ReadOffice365Mailbox\ReadOffice365Mailbox\obj\Debug\ReadOffice365Mailbox.csproj.CopyComplete
 C:\Users\ENES\Desktop\Projeler\BackupMailleriOku\ReadOffice365Mailbox\ReadOffice365Mailbox\obj\Debug\ReadOffice365Mailbox.exe
 C:\Users\ENES\Desktop\Projeler\BackupMailleriOku\ReadOffice365Mailbox\ReadOffice365Mailbox\obj\Debug\ReadOffice365Mailbox.pdb
+C:\Users\ENES\source\repos\ExchangeOnlineMailReading\ReadOffice365Mailbox\obj\Debug\ReadOffice365Mailbox.csprojAssemblyReference.cache
+C:\Users\ENES\source\repos\ExchangeOnlineMailReading\ReadOffice365Mailbox\obj\Debug\ReadOffice365Mailbox.csproj.CoreCompileInputs.cache
+C:\Users\ENES\source\repos\ExchangeOnlineMailReading\ReadOffice365Mailbox\obj\Debug\ReadOffice365Mailbox.exe
+C:\Users\ENES\source\repos\ExchangeOnlineMailReading\ReadOffice365Mailbox\obj\Debug\ReadOffice365Mailbox.pdb

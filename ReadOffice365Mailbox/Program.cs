@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.Exchange.WebServices.Data;
 using System.Data.SqlClient;
+using System.Collections.Generic;
 
 namespace ReadOffice365Mailbox
 {
@@ -8,40 +9,73 @@ namespace ReadOffice365Mailbox
     {
         static void Main(string[] args)
         {
-            ExchangeService _service;
+            EmailReading();
+            //you can show message maybe.
+        }
+    }
+    //get all folders in exchange online mailbox
+    public void GetAllFolders(ExchangeService service, List<Folder> completeListOfFolderIds)
+    {
+        FolderView folderView = new FolderView(100);
+        FindFoldersResults findFolderResults = service.FindFolders(WellKnownFolderName.Inbox, folderView);
+        foreach (Folder folder in findFolderResults)
+        {
+            completeListOfFolderIds.Add(folder);
+            FindAllSubFolders(service, folder.Id, completeListOfFolderIds);
+        }
+    }
+    //find all subfolders 
+    public void FindAllSubFolders(ExchangeService service, FolderId parentFolderId, List<Folder> completeListOfFolderIds)
+    {
+        //alt klasörleri bul
+        FolderView folderView = new FolderView(100);
+        FindFoldersResults foundFolders = service.FindFolders(parentFolderId, folderView);
 
+
+        completeListOfFolderIds.AddRange(foundFolders);
+        foreach (Folder folder in foundFolders)
+        {
+            FindAllSubFolders(service, folder.Id, completeListOfFolderIds);
+        }
+    }
+
+    public void EmailReading()
+    {
+        ExchangeService _service;
+        try
+        {
+            _service = new ExchangeService
+            {
+                //change credentials
+                Credentials = new WebCredentials("mail@mail.com", "MailPassword"),
+                Url = new Uri("https://outlook.office365.com/EWS/Exchange.asmx")
+            };
+        }
+        catch
+        {
+            return;
+        }
+
+        List<Folder> completeListOfFolderIds = new List<Folder>();
+        GetAllFolders(_service, completeListOfFolderIds);
+        EmailLoad db = new EmailLoad();
+
+        foreach (Folder folder in completeListOfFolderIds)
+        {
+            string folderName = folder.DisplayName;
+            //last 3 email in the folder
+            ItemView itemView = new ItemView(3);
+            FindItemsResults<Item> searchResults = _service.FindItems(folder.Id, itemView);
             try
             {
-                Console.WriteLine("Exchange online servislerine bağlanılıyor.");
-
-                _service = new ExchangeService
+                foreach (EmailMessage email in searchResults)
                 {
-                    Credentials = new WebCredentials("backup@yesis.net", "Alp7848**1")
-                };
-            }
-            catch
-            {
-                Console.WriteLine("Exchange bağlantısı başarısız.");
-                return;
-            }
-            _service.Url = new Uri("https://outlook.office365.com/EWS/Exchange.asmx");
-            try
-            {
-                DByeYaz db = new DByeYaz();
-
-                Console.WriteLine("Mailler okunuyor...");
-                // okuyacağım mail sayısı
-                foreach (EmailMessage email in _service.FindItems(WellKnownFolderName.Inbox, new ItemView(100)))
-                {
-                    db.Kaydet(email);
-
+                    db.Save(email, folderName);
                 }
-
-                Console.WriteLine("Kapanıyor.");
             }
             catch (Exception e)
             {
-                Console.WriteLine("Bir hata oluştu. \n:" + e.Message);
+                //do something
             }
         }
     }
